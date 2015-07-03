@@ -192,8 +192,8 @@ static NSArray *RKCacheKeysForEntityFromAttributeValues(NSEntityDescription *ent
 - (void)flush:(void (^)(void))completion
 {
     dispatch_barrier_async(self.queue, ^{
-        RKLogDebug(@"Flushing entity cache for Entity '%@' by attributes '%@'", self.entity.name, self.attributes);
-        self.cacheKeysToObjectIDs = nil;
+        //RKLogDebug(@"Flushing entity cache for Entity '%@' by attributes '%@'", self.entity.name, self.attributes);
+        //self.cacheKeysToObjectIDs = nil;
         if (completion) dispatch_async(self.callbackQueue ?: dispatch_get_main_queue(), completion);
     });
 }
